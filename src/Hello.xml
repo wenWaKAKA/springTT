@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="helloWorld" class="com.codewen.HelloWorld" init-method="init"
+		destroy-method="destroy">
+		<property name="message1" value="Hello World111" />
+		<property name="message2" value="Hello World222" />
+	</bean>
+
+	<bean id="hellochina" class="com.codewen.HelloChina" init-method="init"
+		destroy-method="destroy" parent="helloWorld">
+		<property name="message1" value="hello china111"></property>
+		<property name="message3" value="hello china333"></property>
+	</bean>
+
+	<bean class="com.codewen.Init">
+	</bean>
+
+
+
+</beans>
